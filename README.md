@@ -26,8 +26,10 @@ $ reposnap simonw/llm
 ## Install
 
 ```bash
-pip install reposnap
+pip install rook-reposnap
 ```
+
+> The CLI command is `reposnap`. The PyPI package is `rook-reposnap` because `reposnap` was already taken.
 
 ## Usage
 
