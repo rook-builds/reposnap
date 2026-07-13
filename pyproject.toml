@@ -23,6 +23,9 @@ reposnap = "reposnap.cli:main"
 [project.urls]
 Repository = "https://github.com/rook-builds/reposnap"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/reposnap"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
