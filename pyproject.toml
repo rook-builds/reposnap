@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "reposnap"
-version = "0.1.0"
+name = "rook-reposnap"
+version = "0.1.1"
 description = "Turn any GitHub repo into a clean markdown digest of recent activity."
 readme = "README.md"
 license = "MIT"
