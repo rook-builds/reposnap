@@ -3,7 +3,9 @@ from __future__ import annotations
 
 import json
 
-from . import __version__
+# Hardcoded to avoid circular import (__init__ imports from here; this must
+# not import back from __init__). Keep in sync with pyproject.toml.
+_TOOL_VERSION = "0.2.0"
 
 _ACLI_SPEC_VERSION = "0.1.0"
 
@@ -14,7 +16,7 @@ def get_introspect_json() -> str:
         "acli_version": _ACLI_SPEC_VERSION,
         "tool": {
             "name": "reposnap",
-            "version": __version__,
+            "version": _TOOL_VERSION,
             "description": (
                 "Turn any GitHub repo into a clean markdown or JSON digest "
                 "of recent activity (commits, releases, issues)."
@@ -114,4 +116,4 @@ reposnap skill        # this file
 
 def get_skill_md() -> str:
     """Return agentskills.io-compliant SKILL.md content."""
-    return _SKILL_TEMPLATE.format(version=__version__)
+    return _SKILL_TEMPLATE.format(version=_TOOL_VERSION)
